@@ -10,7 +10,12 @@ class HomePage extends StatelessWidget {
     int days = 30;
     return Scaffold(
       appBar: AppBar(
-        title: Text('hello'),
+        title: Center(
+          child: Text(
+            'Catalog App',
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
       ),
       body: Center(
         child: Container(
