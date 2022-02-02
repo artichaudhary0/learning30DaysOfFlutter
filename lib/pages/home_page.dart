@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('stating from beginning $days days'),
+          child: Text(context.runtimeType.toString()),
         ),
       ),
       drawer: Drawer(
