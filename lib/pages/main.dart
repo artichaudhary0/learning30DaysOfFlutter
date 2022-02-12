@@ -4,6 +4,7 @@ import 'package:catalog/pages/utilities/routes.dart';
 import 'package:catalog/pages/utilities/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:js';
 
 void main() {
   runApp(MyApp());
