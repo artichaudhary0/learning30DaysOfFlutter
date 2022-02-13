@@ -48,13 +48,45 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatalogModels.items != null && CatalogModels.items.isNotEmpty)
-            ? ListView.builder(
-                itemCount: CatalogModels.items.length,
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 15,
+                  crossAxisSpacing: 15,
+                ),
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatalogModels.items[index],
+                  final item = CatalogModels.items[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: GridTile(
+                      child: Image.network(item.image),
+                      header: Container(
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          item.name,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                        ),
+                      ),
+                      footer: Container(
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          item.price.toString(),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   );
                 },
+                itemCount: CatalogModels.items.length,
               )
             : Center(
                 child: CircularProgressIndicator(
