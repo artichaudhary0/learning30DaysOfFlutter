@@ -1,6 +1,7 @@
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/pages/utilities/routes.dart';
 import 'package:catalog/pages/utilities/themes.dart';
+import 'package:catalog/pages/widgets/drawers.dart';
 import 'package:catalog/pages/widgets/home_widgets/catalogHeader.dart';
 import 'package:catalog/pages/widgets/home_widgets/catalogList.dart';
 import 'package:flutter/cupertino.dart';
@@ -40,6 +41,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(),
       backgroundColor: Theme.of(context).canvasColor,
       floatingActionButton: FloatingActionButton(
         backgroundColor: context.theme.buttonColor,
@@ -68,6 +70,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      // drawer: MyDrawer(),
+      // bottomNavigationBar: Icon(CupertinoIcons.person),
     );
   }
 }

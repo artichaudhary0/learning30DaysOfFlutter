@@ -15,6 +15,7 @@ class MyTheme {
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
           toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
+          titleTextStyle: TextStyle(color: Colors.black),
           textTheme: Theme.of(context).textTheme,
         ),
       );
@@ -53,7 +54,7 @@ class MyTheme {
   static Color darkCreamColor = Vx.gray900;
   static Color darkBluishColor = Color(0xff403b58);
   static Color lightBluishColor = Colors.indigo.shade600;
-  static Color captionStyle = Colors.blueGrey.shade200;
+  static Color captionStyle = Colors.blueGrey.shade800;
   static Color pinkColor = Color(0xffec407a);
   static Color darkpinkColor = Color(0xff880e4f);
   static Color lightpinkColor = Color(0xfff48fb1);
