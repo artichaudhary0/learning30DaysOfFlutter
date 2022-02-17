@@ -2,6 +2,12 @@ import 'package:catalog/pages/main.dart';
 
 class CatalogModels {
   static List<Item> items = [];
+
+  // get item by id
+  static Item getItemById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+  //get item by position
+  static Item getItembyPos(int pos) => items[pos];
 }
 
 class Item {

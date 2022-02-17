@@ -12,7 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String name = "";
+  String name = " ";
   bool changeButton = false;
   final _formKey = GlobalKey<FormState>();
 
@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 15,
               ),
               Text(
-                "WelCome $name",
+                "WelCome ${name}",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               SizedBox(

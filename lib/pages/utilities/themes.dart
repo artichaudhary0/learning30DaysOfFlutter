@@ -30,6 +30,22 @@ class MyTheme {
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.white),
           textTheme: Theme.of(context).textTheme,
+          titleTextStyle: TextStyle(color: Colors.white),
+        ),
+      );
+
+  static ThemeData girlishPink(BuildContext context) => ThemeData(
+        brightness: Brightness.light,
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        cardColor: MyTheme.pinkColor,
+        canvasColor: MyTheme.darkpinkColor,
+        buttonColor: lightpinkColor,
+        accentColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          color: Colors.black,
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.white),
+          textTheme: Theme.of(context).textTheme,
         ),
       );
 
@@ -38,4 +54,7 @@ class MyTheme {
   static Color darkBluishColor = Color(0xff403b58);
   static Color lightBluishColor = Colors.indigo.shade600;
   static Color captionStyle = Colors.blueGrey.shade200;
+  static Color pinkColor = Color(0xffec407a);
+  static Color darkpinkColor = Color(0xff880e4f);
+  static Color lightpinkColor = Color(0xfff48fb1);
 }

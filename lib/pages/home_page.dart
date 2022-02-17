@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                 CatalogList().py16().expand()
               else
                 CircularProgressIndicator(
-                  color: Colors.deepPurple,
+                  color: MyTheme.lightBluishColor,
                 ).centered().expand(),
             ],
           ),
