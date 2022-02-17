@@ -17,7 +17,7 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -35,21 +35,21 @@ class HomeDetailPage extends StatelessWidget {
               child: Center(
                 child: Container(
                   width: context.screenWidth,
-                  color: Colors.white,
+                  color: context.cardColor,
                   child: Column(children: [
                     catalog.name.text.xl3
-                        .color(MyTheme.darkBluishColor)
+                        .color(context.accentColor)
                         .bold
                         .make(),
                     8.heightBox,
                     catalog.desc.text
-                        .textStyle(TextStyle(color: Colors.black45))
+                        .textStyle(TextStyle(color: MyTheme.captionStyle))
                         .xl
                         .make(),
                     10.heightBox,
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. "
                         .text
-                        .textStyle(TextStyle(color: Colors.black45))
+                        .textStyle(TextStyle(color: MyTheme.captionStyle))
                         .make(),
                   ]).p32(),
                 ),
@@ -59,7 +59,7 @@ class HomeDetailPage extends StatelessWidget {
         ).centered(),
       ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -71,7 +71,7 @@ class HomeDetailPage extends StatelessWidget {
               },
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(MyTheme.darkBluishColor),
+                    MaterialStateProperty.all(context.theme.buttonColor),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
               child: Text("Add to Cart").text.xl.bold.make(),
