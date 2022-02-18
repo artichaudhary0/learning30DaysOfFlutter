@@ -36,7 +36,13 @@ class _CartHolder extends StatelessWidget {
           "\$999".text.xl5.make(),
           30.widthBox,
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: "Buying not supportd now".text.make(),
+                ),
+              );
+            },
             style: ButtonStyle(
               backgroundColor:
                   MaterialStateProperty.all(context.theme.buttonColor),
