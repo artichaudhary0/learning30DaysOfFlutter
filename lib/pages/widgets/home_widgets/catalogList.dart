@@ -1,5 +1,4 @@
 import 'package:catalog/pages/widgets/home_detail_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../models/catalog.dart';
 import 'catalogItems.dart';

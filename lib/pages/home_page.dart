@@ -1,7 +1,6 @@
 import 'package:catalog/models/catalog.dart';
 import 'package:catalog/pages/utilities/routes.dart';
 import 'package:catalog/pages/utilities/themes.dart';
-import 'package:catalog/pages/widgets/drawers.dart';
 import 'package:catalog/pages/widgets/home_widgets/catalogHeader.dart';
 import 'package:catalog/pages/widgets/home_widgets/catalogList.dart';
 import 'package:flutter/cupertino.dart';

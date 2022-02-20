@@ -1,6 +1,4 @@
 import 'package:catalog/pages/utilities/routes.dart';
-import 'package:catalog/pages/utilities/themes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

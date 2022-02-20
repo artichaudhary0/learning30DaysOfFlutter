@@ -1,6 +1,3 @@
-import 'package:catalog/models/cart.dart';
-import 'package:catalog/pages/utilities/routes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../../../models/catalog.dart';

@@ -3,12 +3,6 @@ import 'package:catalog/pages/main.dart';
 import 'cart.dart';
 
 class CatalogModels {
-  // singleton class
-  static final catModel = CatalogModels._internal();
-
-  CatalogModels._internal();
-
-  factory CatalogModels() => catModel;
   static List<Item> items = [];
 
   // get item by id
