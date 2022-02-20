@@ -1,6 +1,14 @@
 import 'package:catalog/pages/main.dart';
 
+import 'cart.dart';
+
 class CatalogModels {
+  // singleton class
+  static final catModel = CatalogModels._internal();
+
+  CatalogModels._internal();
+
+  factory CatalogModels() => catModel;
   static List<Item> items = [];
 
   // get item by id
@@ -8,6 +16,8 @@ class CatalogModels {
       items.firstWhere((element) => element.id == id, orElse: null);
   //get item by position
   Item getItembyPos(int pos) => items[pos];
+
+  void add(CatalogModels catalog) {}
 }
 
 class Item {
