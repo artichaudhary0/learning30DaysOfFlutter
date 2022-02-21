@@ -1,6 +1,7 @@
-import 'package:catalog/models/cart.dart';
 import 'package:catalog/models/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+import '../models/cart.dart';
 
 class MyStore extends VxStore {
   late CatalogModels catalog;
@@ -9,6 +10,6 @@ class MyStore extends VxStore {
   MyStore() {
     catalog = CatalogModels();
     cart = CartModel();
-    cart.catalog = catalog;
+    cart.catalog = catalog as CatalogModels;
   }
 }

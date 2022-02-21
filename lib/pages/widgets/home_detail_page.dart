@@ -1,16 +1,14 @@
-import 'package:catalog/pages/utilities/themes.dart';
-import 'package:catalog/pages/widgets/home_widgets/add_to_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../../models/catalog.dart';
+import '../utilities/themes.dart';
+import 'home_widgets/add_to_cart.dart';
 
 class HomeDetailPage extends StatelessWidget {
   final Item catalog;
   const HomeDetailPage({Key? key, required this.catalog})
       : assert(catalog != null),
         super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +63,9 @@ class HomeDetailPage extends StatelessWidget {
           buttonPadding: EdgeInsets.zero,
           children: [
             "\$${catalog.price}".text.bold.xl4.red800.make(),
-            AddToCart(catalog: catalog).wh(150, 50),
+            AddToCart(
+              catalog: catalog,
+            ).wh(150, 50),
           ],
         ).p32(),
       ),
