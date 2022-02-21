@@ -77,15 +77,25 @@ class _CartList extends StatelessWidget {
         ? "Nothing to Show".text.xl3.make().centered()
         : ListView.builder(
             itemCount: _cart.items.length,
-            itemBuilder: (context, index) => ListTile(
-                  leading: Icon(Icons.done),
-                  trailing: IconButton(
-                    icon: Icon(Icons.remove_circle_outline),
-                    onPressed: () {
-                      RemoveMutation(_cart.items[index]);
-                    },
-                  ),
-                  title: _cart.items[index].name.text.make(),
+            itemBuilder: (context, index) => Column(
+                  children: [
+                    Card(
+                      child: ListTile(
+                        leading: Icon(Icons.done),
+                        trailing: IconButton(
+                          icon: Icon(
+                            Icons.remove_circle_outline,
+                            color: context.accentColor,
+                          ),
+                          onPressed: () {
+                            RemoveMutation(_cart.items[index]);
+                          },
+                        ),
+                        title: (_cart.items[index].name.text.xl2.make()),
+                        subtitle: _cart.items[index].desc.text.xl.make(),
+                      ),
+                    ),
+                  ],
                 ));
   }
 }
