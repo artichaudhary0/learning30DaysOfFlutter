@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
         changeButton = true;
       });
       await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      await context.vxNav.push(Uri.parse(MyRoutes.homeRoute));
       setState(() {
         changeButton = false;
       });
@@ -38,14 +38,9 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Image.asset('assets/images/login1.png',fit: BoxFit.cover,),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 35.0, 0.0, 0.0),
-                height: 300,
-                width: 370,
-                child: Image.asset(
-                  'assets/images/login2.png',
-                  fit: BoxFit.cover,
-                ),
+              Image.asset(
+                'assets/images/login2.png',
+                fit: BoxFit.cover,
               ),
 
               SizedBox(

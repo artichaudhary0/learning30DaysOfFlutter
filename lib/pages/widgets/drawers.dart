@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.deepPurple,
+        color: context.theme.canvasColor,
         child: ListView(
           children: [
             DrawerHeader(
@@ -37,7 +38,7 @@ class MyDrawer extends StatelessWidget {
               title: Text(
                 'Home',
                 textScaleFactor: 1.3,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.theme.accentColor),
               ),
             ),
             ListTile(
@@ -48,7 +49,7 @@ class MyDrawer extends StatelessWidget {
               title: Text(
                 'Profile',
                 textScaleFactor: 1.3,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.theme.accentColor),
               ),
             ),
             ListTile(
@@ -59,7 +60,7 @@ class MyDrawer extends StatelessWidget {
               title: Text(
                 'Email Me',
                 textScaleFactor: 1.3,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: context.theme.accentColor),
               ),
             ),
           ],

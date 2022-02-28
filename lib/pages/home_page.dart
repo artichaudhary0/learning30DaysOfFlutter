@@ -3,6 +3,7 @@ import 'package:catalog/models/catalog.dart';
 import 'package:catalog/pages/store.dart';
 import 'package:catalog/pages/utilities/routes.dart';
 import 'package:catalog/pages/utilities/themes.dart';
+import 'package:catalog/pages/widgets/drawers.dart';
 import 'package:catalog/pages/widgets/home_widgets/catalogHeader.dart';
 import 'package:catalog/pages/widgets/home_widgets/catalogList.dart';
 import 'package:flutter/cupertino.dart';
@@ -47,7 +48,9 @@ class _HomePageState extends State<HomePage> {
     final _cart = (VxState.store as MyStore).cart;
 
     return Scaffold(
-      // appBar: AppBar(),
+      appBar: AppBar(
+        title: "Items".text.xl3.make(),
+      ),
       backgroundColor: Theme.of(context).canvasColor,
       floatingActionButton: VxBuilder(
         mutations: {AddMutation, RemoveMutation},
@@ -55,20 +58,19 @@ class _HomePageState extends State<HomePage> {
             FloatingActionButton(
           backgroundColor: context.theme.buttonColor,
           onPressed: () {
-            Navigator.pushNamed(context, MyRoutes.cartRoute);
+            context.vxNav.push(Uri.parse(MyRoutes.cartRoute));
           },
           child: Icon(
             CupertinoIcons.cart,
             color: Colors.white,
           ),
         ).badge(
-                color: Vx.red500,
+                color: Vx.gray400,
                 size: 22,
                 count: _cart.items.length,
                 textStyle: TextStyle(
                     color: Colors.black, fontWeight: FontWeight.bold)),
       ),
-
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
@@ -86,8 +88,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // drawer: MyDrawer(),
-      // bottomNavigationBar: Icon(CupertinoIcons.person),
+      drawer: MyDrawer(),
     );
   }
 }
